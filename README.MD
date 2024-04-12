@@ -20,6 +20,16 @@ cargo build
 clang --target=wasm32 --no-standard-libraries -Wl,--export-all -Wl,--no-entry -Wl,--allow-undefined -o stringlen.wasm stringlen.c
 ```
 
+## Creating Proofs
+```bash
+sudo RUST_BACKTRACE=1 cargo run --release -- --host default --function zkmain --wasm ../stringlen.wasm single-prove --public 11:i64
+```
+
+## Verifying Proofs
+```bash
+sudo RUST_BACKTRACE=1 cargo run --release -- --host default --function zkmain --wasm ../stringlen.wasm single-verify
+```
+
 ## License
 
 MIT License.
