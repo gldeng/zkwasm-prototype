@@ -1,0 +1,4 @@
+[submodule "zkWasm"]
+	path = zkWasm
+	url = https://github.com/DelphinusLab/zkwasm.git
+	commit = 7b18f0d75546136de76f24ff365627c49c913731
